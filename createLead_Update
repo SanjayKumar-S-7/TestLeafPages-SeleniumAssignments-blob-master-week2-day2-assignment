@@ -19,8 +19,8 @@ public class AppTest {
 	        edgeDriver.findElement(By.linkText("Leads")).click();
 	        edgeDriver.findElement(By.linkText("Create Lead")).click();
 	        edgeDriver.findElement(By.id("createLeadForm_companyName")).sendKeys("TestLeaf.Org");
-	        edgeDriver.findElement(By.id("createLeadForm_firstName")).sendKeys("Padmavathi Jahnavi");
-	        edgeDriver.findElement(By.id("createLeadForm_lastName")).sendKeys("Aradhyula");
+	        edgeDriver.findElement(By.id("createLeadForm_firstName")).sendKeys("Sanjay");
+	        edgeDriver.findElement(By.id("createLeadForm_lastName")).sendKeys("Kumar");
 	        edgeDriver.findElement(By.name("submitButton")).click();
 	        edgeDriver.findElement(By.linkText("Edit")).click();
 	        WebElement Update = edgeDriver.findElement(By.id("updateLeadForm_companyName"));
