@@ -1,0 +1,32 @@
+package selenium.selenium_training;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class AppTest {
+
+	
+	public static void main(String[] args) throws InterruptedException {
+
+	        EdgeDriver edgeDriver = new EdgeDriver();
+	        edgeDriver.manage().window().maximize();
+	        edgeDriver.get("http://leaftaps.com/opentaps/control/login");
+	        edgeDriver.findElement(By.id("username")).sendKeys("DemoCsr");
+	        edgeDriver.findElement(By.id("password")).sendKeys("crmsfa");
+	        edgeDriver.findElement(By.className("decorativeSubmit")).click();
+	        edgeDriver.findElement(By.linkText("CRM/SFA")).click();
+	        edgeDriver.findElement(By.linkText("Leads")).click();
+	        edgeDriver.findElement(By.linkText("Create Lead")).click();
+	        edgeDriver.findElement(By.id("createLeadForm_companyName")).sendKeys("TestLeaf.Org");
+	        edgeDriver.findElement(By.id("createLeadForm_firstName")).sendKeys("Padmavathi Jahnavi");
+	        edgeDriver.findElement(By.id("createLeadForm_lastName")).sendKeys("Aradhyula");
+	        edgeDriver.findElement(By.name("submitButton")).click();
+	        edgeDriver.findElement(By.linkText("Edit")).click();
+	        WebElement Update = edgeDriver.findElement(By.id("updateLeadForm_companyName"));
+	        Update.clear();
+	        Update.sendKeys("Org.TestLeaf");
+	        edgeDriver.findElement(By.name("submitButton")).click();
+	    }
+
+}
